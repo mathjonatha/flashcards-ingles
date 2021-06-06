@@ -1,0 +1,105 @@
+\usepackage[bitstream-charter, uppercase=upright]{mathdesign} % Fonte
+
+% METADADOS
+\hypersetup{
+            pdfauthor={Matheus Jonatha},
+            pdftitle={Card de memorização de inglês},
+            pdfsubject={Frases em inglês},
+            pdfkeywords={mathjonatha,mthsjonatha,inglês,matheus,jonatha,estudo},
+            pdfproducer={Produzido e gerado no Overleaf, compilado em XeLaTeX},
+            pdfcreator={XeLaTeX}}
+            
+% Comandos criados
+\newcommand{\titulo}[2]{
+\begin{flushleft}
+{\bf \fontsize{80}{48} \selectfont #1} \\ \vspace{3mm}
+{\fontsize{40}{48} \selectfont #2}
+\end{flushleft}
+}
+
+
+%%------------------------------------------
+%% CABEÇALHO E RODAPÉ
+%%------------------------------------------
+% \definecolor{corlinha}{RGB}{0,1,42}
+
+% \usepackage{fancyhdr}
+% \usepackage{lastpage} % Pacote para pegar a ultima pagina na numeração
+% \pagestyle{fancy}
+% \renewcommand{\headrulewidth}{0pt} %linha horizontal no topo da pagina
+%\renewcommand{\footrulewidth}{0.4pt} %linha horizontal no pé da pagina
+
+% \fancyhead[L]{}
+% \fancyhead[R]{
+% \textbf{Monitoria AnnWay - Curso de Matemática Básica}
+    % \begin{tikzpicture}[overlay]
+    %     \node[draw=corlinha,
+    %     circle,minimum width=.7cm, minimum height=.7cm,
+    %     anchor=south west,
+    %     fill=corlinha,font=\fontsize{11}{15}\sffamily,inner sep=1pt,outer sep=1pt]
+    %     at (0,0){\textcolor{white}{\thepage}};
+    % \end{tikzpicture}
+% }
+% \fancyhead[C]{}
+
+% \fancyfoot[R]{
+%     \begin{tikzpicture}[overlay]
+%         \node[draw=corlinha,
+%         circle,minimum width=.7cm, minimum height=.7cm,
+%         anchor=south west,
+%         fill=corlinha,font=\fontsize{10}{15}\sffamily,inner sep=1pt,outer sep=1pt]
+%         at (0,0){\textcolor{white}{\bfseries \thepage/\pageref{LastPage}}};
+%     \end{tikzpicture}
+% }
+% \fancyfoot[C]{}
+
+%\setlength\parindent{0pt}
+%\setlength\parskip{1.5ex}
+%\setlength\parsep{1.5\parskip}
+%\thispagestyle{empty}%\bigskip %Rodapé na primeira pagina
+
+
+
+% Plano de fundo
+% \usepackage{eso-pic,graphicx} % Para funcionar o background
+
+% \AddToShipoutPictureBG{\includegraphics[width=\paperwidth,height=\paperheight]{wallpaper.pdf}}
+
+%--------------------------------------------------------
+% Configurações do cards
+%--------------------------------------------------------
+\definecolor{preto}{RGB}{0,0,0}
+\definecolor{branco}{RGB}{255,255,255}
+
+\pagesetup{3}{8}
+
+% redefining default text style for front side
+\renewcommand{\cardtextstylef}{\bfseries}
+\renewcommand{\cardtextstyleb}{}
+
+\renewcommand{\frfoot}{ \footnotesize \thecardno} % \footnotesize
+\renewcommand{\brfoot}{ \footnotesize \thecardno}
+% \renewcommand{\fchead}{\thecardno}
+
+% redefining center head on frontside
+\renewcommand{\fchead}{%
+\vskip-5pt\fboxsep=0pt%
+\colorbox{preto}{%
+\small \textcolor{branco}{%
+% \parbox{\cardwidth}{\vskip3pt \centering \bf expressões idiomáticas \vskip3pt}%
+\parbox{\cardwidth}{\vskip3pt \centering \bf frases em inglês \vskip3pt}%
+}%
+}%
+}
+
+% \renewcommand{\bcfoot}{%
+% \vskip-5pt\fboxsep=0pt%
+% \colorbox{preto}{%
+% \small \textcolor{branco}{%
+% \parbox{\cardwidth}{\vskip3pt \centering english - translate \vskip3pt}
+% }%
+% }%
+% }
+
+
+\newcommand{\pronuncia}{ \\ \vspace{.3cm} \it \footnotesize}

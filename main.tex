@@ -1,0 +1,33 @@
+% Manual de uso: https://ctan.dcc.uchile.cl/macros/latex/contrib/flacards/flacards.pdf
+
+% http://latexcolor.com/
+
+% https://aulasdeinglesgratis.net/500-expressoes-idiomaticas-da-lingua-inglesa/
+
+% classe: td-post-content td-pb-padding-side
+
+% https://aulasdeinglesgratis.net/1000-frases-em-ingles/
+
+% https://wl-incrivel.cf.tsp.li/resize/728x/jpg/280/4b3/88636b5bdda68bf82b43f6af6f.jpg
+
+\documentclass[a4paper,frontgrid,backgrid]{flacards}
+\input{estrutura/preamble.tex}
+\input{estrutura/configs.tex}
+\usepackage{import}
+
+
+\begin{document}
+\import{cards/}{frases.tex}
+% redefining center head on frontside
+\renewcommand{\fchead}{%
+\vskip-5pt\fboxsep=0pt%
+\colorbox{preto}{%
+\small \textcolor{branco}{%
+\parbox{\cardwidth}{\vskip3pt \centering \bf expressões idiomáticas \vskip3pt}%
+% \parbox{\cardwidth}{\vskip3pt \centering \bf frases em inglês \vskip3pt}%
+}%
+}%
+}
+\import{cards/}{expressoes.tex}
+    
+\end{document}

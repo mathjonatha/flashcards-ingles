@@ -1,0 +1,60 @@
+% Documentação de uso: https://ctan.dcc.uchile.cl/macros/latex/contrib/flashcards/flashcards.pdf
+%\documentclass[avery5388,grid,frame]{flashcards}
+\documentclass[avery5371,frame]{flashcards}
+% fronts % imprimi apenas frente dos cartões
+%backs % imprimi apenas trás dos cartões
+\usepackage[bitstream-charter, uppercase=upright]{mathdesign}
+\usepackage{xcolor}
+
+\definecolor{preto}{RGB}{0,0,0}
+\definecolor{branco}{RGB}{255,255,255}
+
+% \cardfrontstyle[\large\slshape]{headings}
+\cardfrontstyle[\large]{headings}
+% \cardbackstyle{empty}
+
+% Configurações
+% \setlength{\cardmargin}{.4cm}
+% \newcommand{\cardpaper}{letterpaper}
+% \newcommand{\cardpapermode}{portrait}
+% \newcommand{\cardrows}{5}
+% \newcommand{\cardcolumns}{2}
+% \setlength{\cardheight}{1cm}
+% \setlength{\cardwidth}{1cm}
+\setlength{\topoffset}{2cm}
+\setlength{\oddoffset}{2cm}
+\setlength{\evenoffset}{3cm}
+
+\cardfrontheadstyle{center}
+\cardfrontfootstyle[\small\itshape]{center}
+\cardfrontfoot{%
+\fboxsep=5pt%
+\colorbox{preto}{\textcolor{branco}{\centering english - phrase}}
+
+}
+
+
+\begin{document}
+
+
+
+\begin{flashcard}[Definição]{Norm on a Linear Space \\ Normed Space}
+
+A real-valued function $||x||$ defined on a linear space $X$, where $x \in X$, is said to be a \emph{norm on} $X$ if
+
+\end{flashcard}
+
+\begin{flashcard}[Definição]{Inner Product}
+    Let $X$ be a complex linear space. An \emph{inner product} on $X$ is a mapping that associates to each pair of vectors $x$, $y$ a scalar, denoted $(x,y)$, that satisfies the following properties:
+\end{flashcard}
+
+
+\begin{flashcard}[Definição]{Linear Transformation/Operator}
+
+    \begin{enumerate}
+    \item $L(\alpha x) = \alpha L(x), \forall x\in X$ and $\forall$ 64 scalars $\alpha$, and
+    \item $L(x_1 + x_2) = L(x_1) + L(x_2)$ for all $x_1,x_2 \in X$.
+    \end{enumerate}
+\end{flashcard}
+
+\end{document}
