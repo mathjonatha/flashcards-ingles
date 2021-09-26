@@ -13,8 +13,8 @@ jobs:
           latex_main_file: main.tex
 
       - name: Upload
-        uses: actions/upload-artifact@master
+        uses: actions/upload-artifact@v2.2.4
         with:
-          name: teste-run.pdf
+          name: main.pdf
           path: ./ 
         if: always()
